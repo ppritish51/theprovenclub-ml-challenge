@@ -19,6 +19,12 @@
  Trainable params: 12,294 (48.02 KB)
  Non-trainable params: 58,370,944 (222.67 MB)
 
+### Results 
+Epoch 20/20
+351/351 ━━━━━━━━━━━━━━━━━━━━ 384s 1s/step - loss: 0.0563 - sparse_categorical_accuracy: 0.9831
+19/19 ━━━━━━━━━━━━━━━━━━━━ 22s 1s/step - loss: 0.4367 - sparse_categorical_accuracy: 0.9052
+Test accuracy with trained teacher model:90.17 %
+
 ## student
 ```
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
@@ -43,3 +49,9 @@
  Total params: 6,594,550 (25.16 MB)
  Trainable params: 19,311 (75.43 KB)
  Non-trainable params: 6,575,239 (25.08 MB)
+
+### Results 
+Epoch 20/20
+702/702 ━━━━━━━━━━━━━━━━━━━━ 207s 295ms/step - loss: 0.2259 - sparse_categorical_accuracy: 0.9142
+38/38 ━━━━━━━━━━━━━━━━━━━━ 12s 282ms/step - loss: 0.2917 - sparse_categorical_accuracy: 0.8980
+Test accuracy with trained teacher model:90.00 %
