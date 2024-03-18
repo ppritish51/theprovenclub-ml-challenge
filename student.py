@@ -9,7 +9,7 @@ train_dir = "./seg_train/"
 test_dir = "./seg_test/"
 
 # Data configs
-batch_size = 32
+batch_size = 16
 img_height = 150
 img_width = 150
 
@@ -49,7 +49,7 @@ x = base_model(inputs, training=False)
 x = keras.layers.GlobalAveragePooling2D()(x)
 x = keras.layers.Dropout(0.2)(x)  # Regularize with dropout
 # A Dense classifier with a single unit (binary classification)
-x = keras.layers.Dense(30)(x)
+x = keras.layers.Dense(15)(x)
 x = keras.layers.Dropout(0.2)(x)
 outputs = keras.layers.Dense(6)(x)
 model = keras.Model(inputs, outputs)
