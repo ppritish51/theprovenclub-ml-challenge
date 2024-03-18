@@ -49,6 +49,8 @@ x = base_model(inputs, training=False)
 x = keras.layers.GlobalAveragePooling2D()(x)
 x = keras.layers.Dropout(0.2)(x)  # Regularize with dropout
 # A Dense classifier with a single unit (binary classification)
+x = keras.layers.Dense(30)(x)
+x = keras.layers.Dropout(0.2)(x)
 outputs = keras.layers.Dense(6)(x)
 model = keras.Model(inputs, outputs)
 model.summary()
@@ -58,7 +60,7 @@ model.compile(
 		metrics=[keras.metrics.SparseCategoricalAccuracy()],
 )
 
-epochs = 10
+epochs = 20
 model.fit(train_ds, epochs=epochs)
 
 # Generate results on test data
